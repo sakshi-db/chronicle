@@ -1,53 +1,76 @@
-
 # Chronicle
 
-**A personal assistant for organising everyday life.**
+*A personal space to keep track of time, tasks, and life.*
 
-Chronicle is an early working prototype of a personal AI assistant, built around a bigger vision: an intelligent companion that helps people organise their time, manage commitments and navigate everyday life.
+Chronicle started as a simple idea: build something of my own that could help me keep track of how I spend my time, manage everyday tasks and bring a little more structure to life. What began as a small task-management prototype gradually grew into an attempt to build a more complete personal assistant.
 
-This is the first step towards that vision. The current version focuses on foundational task management, with more capabilities to come.
+This branch represents that ongoing development. The goal is to move beyond simply keeping track of tasks, towards a space where planning, time tracking, reflection and understanding daily habits come together.
 
-## Current features
+## Preview
 
-- Create, view, edit and delete tasks
-- Mark tasks as completed
-- Store tasks in a local SQLite database
+![Chronicle Preview](./screenshots/chronicle.png)
 
-## Built with
+## What's Working
 
-- React, TypeScript and Vite
-- Python and FastAPI
+- **Tasks** — Create, edit, organise, complete and manage tasks.
+- **Schedule** — Plan and manage activities throughout the day.
+- **Time Tracking** — Track time spent on activities.
+- **Journal** — Record daily thoughts and experiences.
+- **Insights** — View summaries of tracked activities and time.
+- **Reminders** — Set reminders for planned activities.
+- **Themes** — Switch between light and dark modes.
+
+## Tech Stack
+
+- React
+- TypeScript
+- Vite
+- Python
+- FastAPI
 - SQLite
 
-## Run locally
+## Running Locally
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
 ### Backend
 
 ```bash
 cd backend
-python -m venv .venv
+python -m venv venv
 ```
 
-Activate the virtual environment and install dependencies:
+Activate the virtual environment:
 
-**Windows PowerShell**
-```powershell
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-python -m uvicorn main:app --reload
+**Windows**
+```bash
+venv\Scripts\activate
 ```
 
-### Frontend
+**macOS / Linux**
+```bash
+source venv/bin/activate
+```
 
-Open a second terminal from the project root:
+Install dependencies and start the server:
 
 ```bash
-npm install
-npm run dev
+pip install -r requirements.txt
+uvicorn main:app --reload
 ```
 
-Open the local URL provided by Vite.
+## What's next
+
+Chronicle is still a work in progress. Some ideas for its future include more flexible activity tracking, better reminders, calendar integration, richer insights into time and habits, and eventually a more accessible experience across devices.
+
+For now, it's an ongoing attempt to turn an idea into something genuinely useful, while learning along the way.
 
 ---
 
-*An ongoing experiment in building something useful, one step at a time.*
+*Built one step at a time.*
